@@ -1,11 +1,20 @@
 package com.example.testeregistro.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.testeregistro.R;
+import com.example.testeregistro.Util.ConfiguraBd;
+import com.example.testeregistro.model.Usuario;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistroActivity extends AppCompatActivity {
     Usuario usuario;
@@ -32,9 +41,9 @@ public class RegistroActivity extends AppCompatActivity {
         String email = campoEmail.getText().toString();
         String senha = campoSenha.getText().toString();
 
-        if(!nome.isEmpty()) {
-            if(!email.isEmpty()) {
-                if(!senha.isEmpty()) {
+        if (!nome.isEmpty()) {
+            if (!email.isEmpty()) {
+                if (!senha.isEmpty()) {
                     usuario = new Usuario();
 
                     usuario.setNome(nome);
@@ -48,25 +57,23 @@ public class RegistroActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Preencha o email", Toast.LENGTH_SHORT).show();
             }
-        } else {
-            Toast.makeText(this, "Preencha o nome", Toast.LENGTH_SHORT).show();
         }
+    }
 
-        private void cadastrarUsuario() {
-            autenticacao = ConfiguraBd.Firebaseautenticacao();
+    private void cadastrarUsuario() {
+        autenticacao = ConfiguraBd.Firebaseautenticacao();
 
-            autenticacao.createUserWithEmailAndPassword(
-                    usuario.getEmail(), usuario.getSenha()
-            ).addOnCompleteListenter(this, new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()) {
-                        Toast.makeText(this, "Sucesso", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(this, "Erro", Toast.LENGTH_SHORT).show();
-                    }
+        autenticacao.createUserWithEmailAndPassword(
+                usuario.getEmail(), usuario.getSenha()
+        ).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(RegistroActivity.this, "Seucesso", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(RegistroActivity.this, "Seucesso", Toast.LENGTH_SHORT).show();
                 }
             }
-        }
+        });
     }
 }

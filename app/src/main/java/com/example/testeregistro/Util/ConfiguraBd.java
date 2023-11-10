@@ -1,5 +1,7 @@
 package com.example.testeregistro.Util;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class ConfiguraBd {
     private static FirebaseAuth auth;
     public static FirebaseAuth Firebaseautenticacao() {
