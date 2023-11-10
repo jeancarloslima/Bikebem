@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class RegistroActivity extends AppCompatActivity {
     Usuario usuario;
@@ -71,7 +73,21 @@ public class RegistroActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     Toast.makeText(RegistroActivity.this, "Seucesso", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(RegistroActivity.this, "Seucesso", Toast.LENGTH_SHORT).show();
+                    String excecao = "";
+                    
+                    try{
+                        throw task.getException();
+                    } catch(FirebaseAuthWeakPasswordException e) {
+                        excecao = "Digite uma senha mais forte";
+                    } catch(FirebaseAuthInvalidCredentialsException e) {
+                        excecao = "Digite um email válido";
+                    } catch(FirebaseAuthUserCollisionException e) {
+                        excecao = "Esta conta já existe";
+                    } catch(Exception e) {
+                        excecao = "Erro ao cadastrar usuário " + e.getMessage();
+                        e.printStackTrace();
+                    }
+                    Toast.makeText(RegistroActivity.this, excecao, Toast.LENGTH_SHORT).show();
                 }
             }
         });
