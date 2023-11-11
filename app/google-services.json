@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1007653107680",
-    "project_id": "bikebem-88d16",
-    "storage_bucket": "bikebem-88d16.appspot.com"
+    "project_number": "665148450221",
+    "project_id": "bikebem-7350e",
+    "storage_bucket": "bikebem-7350e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1007653107680:android:9f970793d032ac81d65d85",
+        "mobilesdk_app_id": "1:665148450221:android:5823e8e340965bbe706d24",
         "android_client_info": {
           "package_name": "com.example.testeregistro"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAkR5WdijpD162OL-obQ3Y7krnsLIe96dM"
+          "current_key": "AIzaSyDSe6lvuzJK4Nvt-N6xaTu7LNccIIYYEO0"
         }
       ],
       "services": {

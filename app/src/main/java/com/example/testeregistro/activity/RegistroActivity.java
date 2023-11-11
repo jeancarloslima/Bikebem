@@ -3,6 +3,7 @@ package com.example.testeregistro.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,7 +40,7 @@ public class RegistroActivity extends AppCompatActivity {
         botaoCadastrar = findViewById(R.id.buttonCadastrar);
     }
 
-    private void validarCampos() {
+    public void validarCampos() {
         String nome = campoNome.getText().toString();
         String email = campoEmail.getText().toString();
         String senha = campoSenha.getText().toString();
@@ -72,7 +73,7 @@ public class RegistroActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(RegistroActivity.this, "Seucesso", Toast.LENGTH_SHORT).show();
+                    abrirHome();
                 } else {
                     String excecao = "";
                     
@@ -92,5 +93,10 @@ public class RegistroActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void abrirHome() {
+        Intent i = new Intent(RegistroActivity.this, HomeActivity.class);
+        startActivity(i);
     }
 }
