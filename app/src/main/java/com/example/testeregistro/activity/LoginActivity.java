@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void abrirHome() {
-        Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+        Intent i = new Intent(this, HomeActivity.class);
         startActivity(i);
     }
 

@@ -56,7 +56,7 @@ public class RegistroActivity extends AppCompatActivity {
 
                     cadastrarUsuario();
                 } else {
-                    Toast.makeText(this, "Preencha a seha", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Preencha a senha", Toast.LENGTH_SHORT).show();
                 }
             } else {
                 Toast.makeText(this, "Preencha o email", Toast.LENGTH_SHORT).show();
@@ -96,7 +96,7 @@ public class RegistroActivity extends AppCompatActivity {
     }
 
     private void abrirHome() {
-        Intent i = new Intent(RegistroActivity.this, HomeActivity.class);
+        Intent i = new Intent(this, HomeActivity.class);
         startActivity(i);
     }
 }
