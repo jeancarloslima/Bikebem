@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".activity.HomeActivity">
 
     <Button
@@ -11,7 +12,9 @@
         android:layout_width="300sp"
         android:layout_height="50sp"
         android:layout_marginBottom="180dp"
+        android:onClick="abrirCode"
         android:text="Digitar código da bicicleta"
+        android:textColor="#FFFFFF"
         app:backgroundTint="#399D64"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
