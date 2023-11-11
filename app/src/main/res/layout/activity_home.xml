@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".activity.HomeActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_bold"
-        android:text="Abublé"
-        android:textSize="24sp"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_marginBottom="180dp"
+        android:text="Digitar código da bicicleta"
+        app:backgroundTint="#399D64"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
