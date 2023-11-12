@@ -22,13 +22,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/buttonScan"
         android:layout_width="300sp"
         android:layout_height="50sp"
         android:layout_marginBottom="28dp"
         android:fontFamily="@font/inter_bold"
-        android:onClick="abrirScan"
         android:text="Escanear QR Code"
+        android:onClick="scanCode"
         android:textColor="#399D64"
         app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/button"
