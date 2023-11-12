@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TesteRegistro"
         tools:targetApi="31">
         <activity
+            android:name=".activity.ScanActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.CodeActivity"
             android:exported="false" />
         <activity

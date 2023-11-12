@@ -11,7 +11,7 @@
         android:id="@+id/button"
         android:layout_width="300sp"
         android:layout_height="50sp"
-        android:layout_marginBottom="180dp"
+        android:layout_marginBottom="40dp"
         android:onClick="abrirCode"
         android:text="Digitar código da bicicleta"
         android:textColor="#FFFFFF"
@@ -20,4 +20,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/inter_bold"
+        android:onClick="abrirScan"
+        android:text="Escanear QR Code"
+        android:textColor="#399D64"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="411dp"
+        android:layout_height="543dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

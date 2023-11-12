@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".activity.CodeActivity">
 
     <Button
@@ -11,7 +12,7 @@
         android:layout_width="300sp"
         android:layout_height="50sp"
         android:fontFamily="@font/inter_bold"
-        android:onClick="abrirBike"
+        android:onClick="verificaCodigo"
         android:text="Confirmar"
         android:textColor="#FFFFFF"
         app:backgroundTint="#399D64"
@@ -23,14 +24,14 @@
         app:layout_constraintVertical_bias="0.55" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/editTextCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:ems="10"
         android:hint="12345678"
-        android:onClick="abreBike"
         android:inputType="number"
+        android:onClick="abreBike"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -45,7 +46,7 @@
         android:text="Digite o código da bicicleta"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber3"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCode"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent" />

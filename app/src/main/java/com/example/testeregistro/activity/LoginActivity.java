@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
                     } catch(FirebaseAuthInvalidCredentialsException e) {
                         excecao = "Email ou senha incorreto";
                     } catch(Exception e) {
-                        excecao = "Erro ao logar " + e.getMessage();
+                        excecao = "Email ou senha incorretos";
                         e.printStackTrace();
                     }
                     Toast.makeText(LoginActivity.this, excecao, Toast.LENGTH_SHORT).show();
