@@ -21,73 +21,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="41dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="360dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/couple_bicycle_bro_1_" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="364dp"
-        android:fontFamily="@font/inter_bold"
-        android:text="Visa - 8231"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="456dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginBottom="348dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4" />
-
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="300sp"
-        android:layout_height="50sp"
-        android:layout_marginBottom="68dp"
-        android:fontFamily="@font/inter_bold"
-        android:text="R$10 / hr                  Confirmar"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:backgroundTint="#399D64"
-        app:cornerRadius="8sp"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.google.firebase.firestore.core.ActivityScope.StopListenerFragment"
+        android:layout_width="436dp"
+        android:layout_height="316dp"
+        android:background="#399D64"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="300sp"
         android:layout_height="50sp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/inter_bold"
         android:text="+ Add meio de pagamento"
         android:textColor="#399D64"
@@ -95,7 +43,65 @@
         app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_marginBottom="44dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="R$10 / hr                  Confirmar"
+        android:textColor="#399D64"
+        android:textSize="18sp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="256dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Visa - 8231"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="41dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="256dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/couple_bicycle_bro_1_" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="50dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="440dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:buttonTint="#FFFFFF" />
+
+
+    </RadioGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

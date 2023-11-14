@@ -44,7 +44,7 @@ public class HomeActivity extends AppCompatActivity {
                 Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
                 abrirBike();
             } else {
-                Toast.makeText(this, strResult, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Insira um código válido", Toast.LENGTH_SHORT).show();
             }
         }
     });

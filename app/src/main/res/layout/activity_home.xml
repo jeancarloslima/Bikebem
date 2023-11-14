@@ -7,6 +7,7 @@
     android:background="#FFFFFF"
     tools:context=".activity.HomeActivity">
 
+
     <Button
         android:id="@+id/button"
         android:layout_width="300sp"
@@ -35,11 +36,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="411dp"
-        android:layout_height="543dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

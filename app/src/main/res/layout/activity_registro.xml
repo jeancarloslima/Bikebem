@@ -15,10 +15,13 @@
         android:ems="10"
         android:hint="Nome"
         android:inputType="text"
+        android:textAlignment="viewStart"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#399D64"
+        android:textColorHint="#8A8A8A"/>
 
     <EditText
         android:id="@+id/editTextPhone"
@@ -31,7 +34,9 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNome"
+        android:backgroundTint="#399D64"
+        android:textColorHint="#8A8A8A"/>
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -44,7 +49,9 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        android:backgroundTint="#399D64"
+        android:textColorHint="#8A8A8A"/>
 
     <EditText
         android:id="@+id/editTextSenha"
@@ -57,7 +64,9 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+        android:backgroundTint="#399D64"
+        android:textColorHint="#8A8A8A"/>
 
     <EditText
         android:id="@+id/editTextNumber"
@@ -70,7 +79,9 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSenha"
+        android:backgroundTint="#399D64"
+        android:textColorHint="#8A8A8A"/>
 
     <EditText
         android:id="@+id/editTextNumber2"
@@ -83,7 +94,9 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        android:backgroundTint="#399D64"
+        android:textColorHint="#8A8A8A"/>
 
     <Button
         android:id="@+id/buttonCadastrar"
