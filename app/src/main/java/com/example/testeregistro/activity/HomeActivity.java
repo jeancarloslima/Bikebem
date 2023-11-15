@@ -58,4 +58,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent i = new Intent(this, BikeActivity.class);
         startActivity(i);
     }
+
+    public void abrePerfil(View view) {
+        Intent i = new Intent(this, ProfileActivity.class);
+        startActivity(i);
+    }
 }
