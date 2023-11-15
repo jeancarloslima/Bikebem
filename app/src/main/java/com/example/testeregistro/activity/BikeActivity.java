@@ -16,8 +16,8 @@ public class BikeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bike);
     }
 
-    public void abreCartoes(View view) {
-        Intent i = new Intent(this, CardsActivity.class);
+    public void abreAddMeioPagamento(View view) {
+        Intent i = new Intent(this, AddMeioPagamentoActivity.class);
         startActivity(i);
     }
 

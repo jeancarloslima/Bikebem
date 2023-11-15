@@ -9,11 +9,15 @@
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="541dp"
+        android:layout_width="match_parent"
         android:layout_height="333dp"
-        app:srcCompat="@mipmap/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="-65dp"
-        tools:layout_editor_absoluteY="134dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
 
     <TextView
         android:id="@+id/textView3"
@@ -22,7 +26,7 @@
         android:layout_marginTop="52dp"
         android:fontFamily="@font/inter_bold"
         android:text="Urban Bike"
-        android:textColor="#515151"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -84,31 +88,32 @@
         android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:srcCompat="@drawable/ic_profile" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/inter_bold"
         android:text="1"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView12" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="31dp"
         android:layout_height="32dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
         android:contentDescription="TODO"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
@@ -120,7 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/inter_bold"
         android:text="7"
         android:textColor="#000000"
@@ -129,6 +134,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="315dp"
         android:background="#399D64"
@@ -143,11 +149,11 @@
             android:layout_height="50sp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/inter_bold"
-            android:onClick="abreCartoes"
+            android:onClick="abreAddMeioPagamento"
             android:text="+ Add meio de pagamento"
-            android:textColor="#399D64"
+            android:textColor="#FFFFFF"
             android:textSize="16sp"
-            app:backgroundTint="#FFFFFF"
+            app:backgroundTint="#399D64"
             app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
@@ -156,7 +162,7 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="300sp"
-            android:layout_height="50sp"
+            android:layout_height="60sp"
             android:layout_marginBottom="44dp"
             android:fontFamily="@font/inter_bold"
             android:onClick="abreConfirma"
