@@ -8,50 +8,50 @@
     tools:context=".activity.AddMeioPagamentoActivity">
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/editTextNumeroCartao"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
+        android:backgroundTint="#399D64"
         android:ems="10"
         android:hint="Número do cartão"
         android:inputType="number"
         android:textColor="#000000"
+        android:textColorHint="#8A8A8A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="#399D64"
-        android:textColorHint="#8A8A8A"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="120sp"
+        android:id="@+id/editTextNumeroVencimento"
+        android:layout_width="300sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
         android:layout_marginTop="20dp"
+        android:backgroundTint="#399D64"
         android:ems="10"
         android:hint="Data venc."
         android:inputType="date"
         android:textColor="#000000"
+        android:textColorHint="#8A8A8A"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        android:backgroundTint="#399D64"
-        android:textColorHint="#8A8A8A"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextBandeiraCartao" />
 
     <EditText
-        android:id="@+id/editTextNumber4"
-        android:layout_width="120sp"
+        android:id="@+id/editTextNumeroCVV"
+        android:layout_width="300sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
         android:layout_marginTop="20dp"
+        android:backgroundTint="#399D64"
         android:ems="10"
         android:hint="CVV"
         android:inputType="number"
         android:textColor="#000000"
-        app:layout_constraintStart_toEndOf="@+id/editTextDate"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        android:backgroundTint="#399D64"
-        android:textColorHint="#8A8A8A"/>
+        android:textColorHint="#8A8A8A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumeroVencimento" />
 
     <Button
         android:id="@+id/button6"
@@ -60,6 +60,7 @@
         android:layout_marginBottom="50dp"
         android:fontFamily="@font/inter_bold"
         android:text="Adicionar"
+        android:onClick="cadastrarCartao"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:backgroundTint="#399D64"
@@ -69,18 +70,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editTextBandeiraCartao"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:backgroundTint="#399D64"
         android:ems="10"
         android:hint="Bandeira do Cartão"
         android:inputType="text"
         android:textColor="#000000"
+        android:textColorHint="#8A8A8A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber3"
-        android:backgroundTint="#399D64"
-        android:textColorHint="#8A8A8A"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumeroCartao" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

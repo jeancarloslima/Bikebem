@@ -1,7 +1,7 @@
 package com.example.testeregistro.model;
 
 public class Usuario {
-    private String nome, email, senha;
+    private String nome, email, senha, telefone;
 
     public Usuario() {
 
@@ -29,5 +29,13 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }

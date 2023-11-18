@@ -24,7 +24,7 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 public class RegistroActivity extends AppCompatActivity {
     Usuario usuario;
     FirebaseAuth autenticacao;
-    EditText campoNome, campoEmail, campoSenha;
+    EditText campoNome, campoEmail, campoSenha, campoTelefone;
     Button botaoCadastrar;
 
     @Override
@@ -38,6 +38,7 @@ public class RegistroActivity extends AppCompatActivity {
         campoNome = findViewById(R.id.editTextNome);
         campoEmail = findViewById(R.id.editTextEmail);
         campoSenha = findViewById(R.id.editTextSenha);
+        campoTelefone = findViewById(R.id.editTextPhone);
         botaoCadastrar = findViewById(R.id.buttonCadastrar);
     }
 
@@ -45,6 +46,7 @@ public class RegistroActivity extends AppCompatActivity {
         String nome = campoNome.getText().toString();
         String email = campoEmail.getText().toString();
         String senha = campoSenha.getText().toString();
+        String telefone = campoTelefone.getText().toString();
 
         if (!nome.isEmpty()) {
             if (!email.isEmpty()) {
@@ -54,6 +56,7 @@ public class RegistroActivity extends AppCompatActivity {
                     usuario.setNome(nome);
                     usuario.setEmail(email);
                     usuario.setSenha(senha);
+                    usuario.setTelefone(telefone);
 
                     cadastrarUsuario();
                 } else {
