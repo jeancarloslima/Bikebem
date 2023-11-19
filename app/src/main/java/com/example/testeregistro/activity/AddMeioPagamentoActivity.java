@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,11 +14,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.testeregistro.R;
+import com.example.testeregistro.model.Cartao;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AddMeioPagamentoActivity extends AppCompatActivity {
 
     EditText campoNumeroCartao, campoBandeiraCartao, campoDataVencimento, campoCVV;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +30,12 @@ public class AddMeioPagamentoActivity extends AppCompatActivity {
     }
 
     public void cadastrarCartao(View view) {
-        /* String numeroCartao = campoNumeroCartao.getText().toString();
+        String numeroCartao = campoNumeroCartao.getText().toString();
         String bandeiraCartao = campoBandeiraCartao.getText().toString();
-        String dataVencimento = campoDataVencimento.getText().toString();
-        String cvv = campoCVV.getText().toString(); */
+
+        DatabaseReference cartoesRef = FirebaseDatabase.getInstance().getReference().child("cartoes");
+        Cartao novoCartao = new Cartao(bandeiraCartao, numeroCartao);
+        cartoesRef.push().setValue(novoCartao);
 
         abrirBike();
     }

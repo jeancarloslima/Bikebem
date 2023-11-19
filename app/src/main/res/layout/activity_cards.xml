@@ -21,26 +21,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageCartao"
+        android:id="@+id/imageCartao1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:srcCompat="@drawable/ic_card_green" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textCard1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/inter_bold"
-        android:text="Visa - **** 2930"
         android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imageCartao1"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <Button
@@ -49,8 +48,8 @@
         android:layout_height="50sp"
         android:layout_marginBottom="50dp"
         android:fontFamily="@font/inter_bold"
-        android:text="Adicionar forma de pagamento"
         android:onClick="abreAddMeioPagamento"
+        android:text="Adicionar forma de pagamento"
         android:textColor="#FFFFFF"
         app:backgroundTint="#399D64"
         app:cornerRadius="8sp"
@@ -58,4 +57,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageCartao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageCartao1"
+        app:srcCompat="@drawable/ic_card_green" />
+
+    <ImageView
+        android:id="@+id/imageCartao3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageCartao2"
+        app:srcCompat="@drawable/ic_card_green" />
+
+    <TextView
+        android:id="@+id/textCard2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imageCartao2"
+        app:layout_constraintTop_toBottomOf="@+id/textCard1" />
+
+    <TextView
+        android:id="@+id/textCard3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/imageCartao3"
+        app:layout_constraintTop_toBottomOf="@+id/textCard2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
