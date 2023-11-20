@@ -20,13 +20,13 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddMeioPagamentoActivity extends AppCompatActivity {
 
-    EditText campoNumeroCartao, campoBandeiraCartao, campoDataVencimento, campoCVV;
+    EditText campoNumeroCartao, campoBandeiraCartao;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_meio_pagamento);
+        inicializarCampos();
     }
 
     public void cadastrarCartao(View view) {
@@ -37,14 +37,12 @@ public class AddMeioPagamentoActivity extends AppCompatActivity {
         Cartao novoCartao = new Cartao(bandeiraCartao, numeroCartao);
         cartoesRef.push().setValue(novoCartao);
 
-        abrirBike();
+        finish();
     }
 
     private void inicializarCampos() {
         campoNumeroCartao = findViewById(R.id.editTextNumeroCartao);
         campoBandeiraCartao = findViewById(R.id.editTextBandeiraCartao);
-        campoDataVencimento = findViewById(R.id.editTextNumeroVencimento);
-        campoCVV = findViewById(R.id.editTextNumeroCVV);
     }
 
     private void abrirBike() {

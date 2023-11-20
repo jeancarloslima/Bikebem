@@ -22,13 +22,12 @@
 
     <ImageView
         android:id="@+id/imageCartao1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:srcCompat="@drawable/ic_card_green" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textCard1"
@@ -58,42 +57,4 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageCartao2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageCartao1"
-        app:srcCompat="@drawable/ic_card_green" />
-
-    <ImageView
-        android:id="@+id/imageCartao3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageCartao2"
-        app:srcCompat="@drawable/ic_card_green" />
-
-    <TextView
-        android:id="@+id/textCard2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/imageCartao2"
-        app:layout_constraintTop_toBottomOf="@+id/textCard1" />
-
-    <TextView
-        android:id="@+id/textCard3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toEndOf="@+id/imageCartao3"
-        app:layout_constraintTop_toBottomOf="@+id/textCard2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

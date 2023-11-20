@@ -53,7 +53,7 @@
         android:layout_marginTop="48dp"
         android:fontFamily="@font/inter_bold"
         android:onClick="abreCards"
-        android:text="Formas de pagamento"
+        android:text="Forma de pagamento"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:backgroundTint="#399D64"
